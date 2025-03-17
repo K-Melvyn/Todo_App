@@ -17,4 +17,4 @@ EXPOSE 8080
 ENV PORT=8080
 
 # Start the built-in PHP server on the specified port
-CMD ["sh", "-c", "php -s 0.0.0.0:$PORT -t /app"]
+CMD ["php", "-S", "0.0.0.0:10000", "-t", "/app"]
