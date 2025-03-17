@@ -18,3 +18,7 @@ ENV PORT=8080
 
 # Start the built-in PHP server on the specified port
 CMD ["php", "-S", "0.0.0.0:10000", "-t", "/app"]
+
+RUN docker-php-ext-install mysqli
+
+RUN docker-php-ext-enable mysqli
