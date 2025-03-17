@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>
+      ToDo log in
+    </title>
+
+    <style>
+
+      .title {
+       font-size: 40px;
+       color: rgb(236, 154, 0);
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+      }
+
+      .box{
+       
+        height: 36px;
+        width: 300px;
+      }
+      .log_in{
+        background-color: rgb(236, 154, 0);
+        color: black;
+        border: solid 1px black;
+        border-radius: 5px;
+        height: 36px;
+        width: 300px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+      }
+      .log_in:hover {
+        opacity: 0.8;}
+       
+    </style>
+
+  </head>
+
+  <body>
+    <div class="body">
+
+  
+  <form class="form" action="login.php" method="POST">
+
+  <div class="container">
+
+    <h1 class="title"> ToDo </h1> 
+    
+    <h2 class="down"> Log in </h2>
+
+  <label class="label" for="">Email</label>
+  <input class="box" type="email" name="email" placeholder="Email" required>
+
+  <label class="label" for="">Password</label>
+  <input class="box" type="password" name="password" placeholder="Password" required>
+
+  <button class="log_in" type="submit" >log in</button>
+
+  <div> <label class="down"> ----------or---------- </label> </div>
+  
+  <div><label class="down"> Dont't have an account? <a href="signup.html"> sign up </a> </label> </div>
+
+  </div>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

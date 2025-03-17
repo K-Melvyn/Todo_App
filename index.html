@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo App</title>
+    <style>
+      .title {
+        font-size: 40px;
+        color: rgb(236, 154, 0);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      /* Flex container for image and form */
+      .wrapper {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        justify-content: center; /* Center content */
+        height: 100vh;
+      }
+
+      .image {
+        width: 50%; /* Adjust width */
+        height: auto;
+      }
+
+      .form-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .label {
+        background-color: rgb(236, 154, 0);
+        border: none;
+        border-radius: 5px;
+        height: 36px;
+        width: 200px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .label a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        line-height: 36px;
+      }
+
+      .label:hover {
+        opacity: 0.8;
+      }
+
+      .separator {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <img class="image" src="https://images.pexels.com/photos/1784578/pexels-photo-1784578.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ToDo Image">
+      
+      <div class="form-container">
+        <h1 class="title">ToDo</h1>
+
+        <button class="label">
+          <a href="login.html">Log in</a>
+        </button>
+
+        <div class="separator">----------or----------</div>
+
+        <button class="label">
+          <a href="signup.html">Sign up</a>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
