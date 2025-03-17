@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("is", $user_id, $title);
 
     if ($stmt->execute()) {
-        header("Location: index.php");
+        header("Location: ind.php");
         exit();
     } else {
         echo "Error .";

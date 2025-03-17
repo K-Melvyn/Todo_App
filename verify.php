@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
 
         echo "✅ Compte vérifié avec succès !";
-        header("Location: login.php");
+        header("Location: index.php");
         exit(); 
     } else {
         echo "❌ OTP incorrect.";

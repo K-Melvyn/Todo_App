@@ -3,7 +3,7 @@ include "connection.php";
 session_start();
 
 if (!isset($_GET['id'])) {
-    header("Location: index.php");
+    header("Location: ind.php");
     exit();
 }
 

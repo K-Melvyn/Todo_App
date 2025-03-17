@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssi", $title, $status, $id);
 
     if ($stmt->execute()) {
-        header("Location: index.php");
+        header("Location: ind.php");
         exit();
     } else {
         echo "Error while updating.";

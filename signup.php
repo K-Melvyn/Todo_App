@@ -20,9 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: verify.php?email=$email");
         exit();
     } else {
-        echo "Erreur d'inscription.";
+        echo "Error.";
     }
 }
-     echo "Click here to <a href='login.php'>Login</a>";
+     echo "Click here to <a href='index.php'>Login</a>";
 ?>
 
