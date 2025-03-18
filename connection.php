@@ -3,7 +3,7 @@
 $host = "sql8.freesqldatabase.com";
 $database = "sql8768241";
 $user = "sql8768241";
-$pass = "";
+$pass = "aWUq12lQzU";
 
 // Active le mode rapport d'erreur pour voir les erreurs
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
