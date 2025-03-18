@@ -1,17 +1,20 @@
 <?php 
-//connection to database
-$host= "dpg-cvcbrnhu0jms73eq2g60-a";
-$database ='todo_app_0im1';
-$user = 'root';
-$pass = 'cleGgu5aAPm47R83Szr8yLYN5Vw2pZGm';
+// Infos de connexion
+$host = "sql8.freesqldatabase.com";
+$database = "sql8768241";
+$user = "sql8768241";
+$pass = "";
 
+// Active le mode rapport d'erreur pour voir les erreurs
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+// Connexion à la base de données
 $conn = new mysqli($host, $user, $pass, $database);
-if($conn->connect_error){
-    die('Could not connect to DB Server on $host' .  $conn->connect_error);
-}
-    else{
-        echo 'Connected to the database';
-    }
-    
 
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("Connection failure : " . $conn->connect_error);
+} else {
+    echo "Connected to the data base !";
+}
 ?>
