@@ -1,28 +1,32 @@
 <?php
-include "connection.php";
+ob_start(); // ✅ Mettre tout en haut
 
+include "connection.php";
 include "mail.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
-    $otp = rand(100000, 999999); // Define OTP here
+    $otp = rand(100000, 999999); // Génère l'OTP
 
-    $sql = "INSERT INTO users ( email, password, otp_code) VALUES ( ?, ?, ?)";
+    $sql = "INSERT INTO users (email, password, otp_code) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ssi", $email, $password, $otp);
 
     if ($stmt->execute()) {
-        // ✅ Send OTP Email
+        // ✅ Envoie l'email de vérification
         sendVerificationEmail($email, $otp);
 
-        // ✅ Redirect to verification page
+        // ✅ Redirection vers verify.php
         header("Location: verify.php?email=$email");
         exit();
     } else {
         echo "Error.";
     }
 }
-     echo "Click here to <a href='index.php'>Login</a>";
-?>
 
+// Ce message ne s'affichera que si l'inscription échoue
+echo "Click here to <a href='index.php'>Login</a>";
+
+ob_end_flush(); // ✅ Fin du buffer
+?>

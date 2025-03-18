@@ -14,7 +14,5 @@ $conn = new mysqli($host, $user, $pass, $database);
 // Vérifier la connexion
 if ($conn->connect_error) {
     die("Connection failure : " . $conn->connect_error);
-} else {
-    echo "Connected to the data base !";
 }
 ?>
