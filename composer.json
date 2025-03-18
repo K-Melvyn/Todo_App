@@ -3,6 +3,7 @@
     "description": "A simple To-Do application with authentication and email verification",
     "type": "project",
     "require": {
+        "ext-mysqli": "*",
         "phpmailer/phpmailer": "^6.9",
         "vlucas/phpdotenv": "^5.5"
     },
