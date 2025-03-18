@@ -1,4 +1,6 @@
 <?php
+ob_start(); // ✅ Démarrer la mise en tampon de sortie
+
 include "connection.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,19 +24,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
         $stmt->close();
 
-        echo "✅ Compte vérifié avec succès !";
+        // ✅ Supprimer tout affichage avant la redirection
         header("Location: index.php");
         exit(); 
     } else {
-        echo "❌ OTP incorrect.";
+        echo "OTP incorrect.";
     }
 }
+
+ob_end_flush(); // ✅ Vider le tampon de sortie
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title> OTP Verification</title>
+    <title>OTP Verification</title>
 
     <style>
       .logo{
@@ -57,24 +61,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         justify-content: center;
         margin-top: 100px;
       }
-
     </style>
-
 </head>
 
 <body>
     <div class="container">
+        <h2 class="logo">ToDo</h2>
+        <h2>Email Verification</h2>
 
-    <h2 class="logo">ToDo</h2>
-
-    <h2>Email Verification</h2>
-    
-    <form method="POST">
-        <input type="hidden" name="email" value="<?= htmlspecialchars($_GET['email'] ?? '') ?>">
-        <label>Entrez OTP :</label>
-        <input type="text" name="otp" required>
-        <button class="butt" type="submit">Verify</button>
-    </form>
+        <form method="POST">
+            <input type="hidden" name="email" value="<?= htmlspecialchars($_GET['email'] ?? '') ?>">
+            <label>Entrez OTP :</label>
+            <input type="text" name="otp" required>
+            <button class="butt" type="submit">Verify</button>
+        </form>
     </div>
 </body>
 </html>
