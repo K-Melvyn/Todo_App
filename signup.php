@@ -24,6 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error.";
     }
 }
+if (sendVerificationEmail($email, $otp)) {
+    echo "Email envoyé avec OTP : " . $otp; // 🛠 Debug
+} else {
+    echo "Couldn't send OTP.";
+}
+
 
 // Ce message ne s'affichera que si l'inscription échoue
 echo "Click here to <a href='index.php'>Login</a>";

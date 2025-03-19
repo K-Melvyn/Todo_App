@@ -10,12 +10,12 @@ function  sendVerificationEmail($email, $otp) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.example.com'; // Your SMTP server
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'your_email@example.com'; // Your SMTP username
-        $mail->Password   = 'your_email_password'; // Your SMTP password
+        $mail->Username   = 'tmelvyn32@gmail.com'; // Your SMTP username
+        $mail->Password   = 'jsge mams xyzz quma'; // Your SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('your_email@example.com', 'ToDo App');
+        $mail->setFrom('tmelvyn32@gmail.com', 'ToDo App');
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject = 'Verify Your Email';
